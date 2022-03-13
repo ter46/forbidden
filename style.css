@@ -3,6 +3,7 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Open Sans',sans-serif;
+    background-color: #fafbff;
 }
 
 .wrapper {
@@ -21,7 +22,6 @@ body {
 
 .menu {
     float: right;
-
 }
 
 
@@ -30,7 +30,7 @@ nav {
     margin: auto;
     display: flex;
     line-height: 80px;
-    position: sticky;
+    position: fixed;
     position: -webkit-sticky; 
     top: 0;
     background:#f5f6fa;
@@ -74,6 +74,13 @@ section {
     margin-bottom: 50px;
 }
 
+.content {
+    width: 1100px;
+    margin: auto;
+    position: relative;
+    padding-top: 70px;
+  }
+
 .kolom {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -90,16 +97,20 @@ h2 {
     line-height: 50px;
 }
 
+#home{
+    padding: 50px 0px;
+}
 
 a.tbl-red {
-    background: #e84118;
-    border-radius: 20px;
+    background: #92acef;
+    letter-spacing: 1px;
+    border-radius: 30px;
     margin-top: 20px;
     padding: 15px 20px 15px 20px;
-    color: #FFFFFF;
+    color: #ffffff;
     cursor: pointer;
     font-weight: bold;
-}
+  }
 
 a.tbl-red:hover {
     background: #192a56;
@@ -111,6 +122,50 @@ p {
     padding: 10px 0px 10px 0px;
 }
 
+.bubble {
+    position: absolute;
+    top: 0px;
+    left: -100px;
+    bottom: 0px;
+    z-index: -50;
+    width: 90%;
+    content: '';
+    border-radius: 50%;
+    background-color: rgb(198, 198, 198);
+    background: linear-gradient(40deg, rgb(231, 234, 253) 0%, rgb(255, 255, 255) 35%, #ffffff 100%);
+  }
+  #home img {
+    width: 45%;
+    display: block;
+  }
+  
+  #home .text-home {
+    position: relative;
+  }
+  
+  .text-home h3,
+  h1,
+  p {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .text-home h3 {
+    color: #618bf9;
+    letter-spacing: 2px;
+    font-weight: 800;
+    max-width: 600px;
+  }
+  .text-home h1 {
+    font-size: 40px;
+    color: #031d5b;
+    max-width: 600px;
+  }
+  .text-home p{
+    max-width: 600px;
+  }
+  .text-home span{
+    color: #618bf9;
+  }
 
 @media screen and (max-width: 990px) {
     .wrapper {
@@ -118,6 +173,7 @@ p {
     }
 
     .logo a {
+        font-size: 30px;
         display: block;
         width: 100%;
         text-align: center;
@@ -139,6 +195,11 @@ p {
         float: none;
     }
 
+    .content {
+        width: 90%;
+        padding-top: 200px;
+      }
+
     section {
         display: block;
     }
@@ -149,6 +210,33 @@ p {
         height: auto;
     }
 
+    #home{
+        padding: 0px 0px;
+      }
     
+      #home img {
+        margin-top: 70px;
+        width: 100%;
+        display: block;
+      }
+    
+      #home .text-home {
+        margin: 0px 0px;
+        position: relative;
+        text-align: center;
+      }
+    
+      .text-home h1,p {
+        max-width: fit-content;
+      }
+    
+      .text-home h1{
+        font-size: 30px;
+      }
+    
+      .bubble{
+        height: 0%;
+        width: 0%;
+      }
 
 }
