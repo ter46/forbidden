@@ -126,10 +126,12 @@ table {
 /*Akhir CSS Reset*/
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden !important;
 }
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #fafbff;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -154,10 +156,9 @@ nav {
   width: 100%;
   margin: auto;
   display: flex;
-  line-height: 80px; /*
-  position: sticky;
-  position: -webkit-sticky;*/
+  line-height: 80px;
   position: fixed;
+  position: -webkit-sticky;
   top: 0;
   background: #f5f6fa;
   z-index: 1;
@@ -185,7 +186,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #ffd800;
+  opacity: 0.7;
 }
 
 * {
@@ -506,7 +507,7 @@ input[type='submit']:hover {
 
 .ctc-right p {
   font-style: italic;
-  margin: 10px 20px;
+  margin-top: 10px;
   color: white;
   text-align: center;
 
@@ -629,7 +630,7 @@ footer {
   }
 
   .margin-center {
-    margin: none;
+    margin: 30px 0;
   }
 
   #team p {
