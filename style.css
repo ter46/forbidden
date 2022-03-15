@@ -361,8 +361,9 @@ p {
 
 /*  */
 #team {
-  padding-top: 100px;
+  padding: 100px 0;
   display: inline-block;
+  text-align: center;
 }
 #team h1 {
   font-size: 60px;
@@ -370,26 +371,29 @@ p {
   color: #031d5b;
   letter-spacing: 5px;
 }
-#team div {
+#team .team-header {
   font-weight: 500;
   margin-top: 20px;
   color: #031d5b;
   font-size: 20px;
   text-align: center;
+  padding-bottom: 70px;
 }
-.team-wrapper-top,
-.team-wrapper-bottom {
-  display: block;
+.team-wrapper-top {
   float: left;
+  width: 33.33%;
+}
+.team-wrapper-bottom {
+  margin-top: 20px;
+  float: left;
+  width: 50%;
 }
 .team-wrapper-top img {
   width: 200px;
-  padding: 20px 83px;
   border-radius: 50%;
 }
 .team-wrapper-bottom img {
   width: 200px;
-  padding: 20px 174px;
   margin-top: 30px;
   border-radius: 50%;
 }
@@ -520,40 +524,6 @@ footer {
   margin-top: 20px;
   letter-spacing: 0.5px;
 }
-
-.active.slideRight {
-  animation: slideRight 2s forwards;
-}
-.active.slideLeft {
-  animation: slideLeft 2s forwards;
-}
-.active.fadeIn {
-  animation: fadeIn 4s forwards;
-}
-@keyframes slideLeft {
-  0% {
-    transform: translateX(900px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes slideRight {
-  0% {
-    transform: translateX(-900px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @media screen and (max-width: 990px) {
   .wrapper {
     width: 90%;
@@ -633,14 +603,25 @@ footer {
     margin: 30px 0;
   }
 
+  #team {
+    text-align: center;
+  }
+  #team .team-header p {
+    font-size: 20px;
+  }
+  #team h1 {
+    font-size: 30px;
+  }
   #team p {
     margin: 0 auto;
   }
   .team-wrapper-top,
   .team-wrapper-bottom {
+    float: none;
     display: inline-block;
     text-align: center;
-    width: 100%;
+    width: 90%;
+    margin: 30px auto;
   }
   .team-wrapper-top p,
   .team-wrapper-bottom p {
